@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid_02_연습</title>
+  <style>
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li{
+  list-style: none;
+}
+
+ul{
+  border: 5px solid teal;
+}
+
+li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  border: 5px solid tomato;
+  border-radius: 8px;
+}
+
+/* .container{
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "a a a"
+  "b b ."
+  "c d e";
+} */
+  /* => . 을 찍으면 빈공으로 활용할 수 있음 */
+
+
+
+/* li:nth-child(1){ grid-area: a; }
+li:nth-child(2){ grid-area: b; }
+li:nth-child(3){ grid-area: c; }
+li:nth-child(4){ grid-area: d; }
+li:nth-child(5){ grid-area: e; } */
+
+/* =>이름은 문자열을 따옴표없이 준다 */
+
+/* =>grid-area로 각 영역에 이름 붙이고 그 이름을 토대로 배치와 크기를 결정한다  */
+
+
+/* .container{
+  display: grid;
+  height: 500px;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+
+  /* align-items: stretch; */
+  /* =>기본값, 행의 높이만큼 확장된다, */
+
+  /* align-items: start; */
+  /* =>행의 시작부분의 요소들이 붙게된다  */
+
+  /* align-items: end;
+  => 끝의 붙음 */
+
+  /* align-items: center; */
+  /* =>가운데 붙음!  */
+
+  /* =>결국 align-items은 행의 높이 안에서의 배치를 결정한다!!!********** */
+
+
+  /* ------------------------------------------------------ */
+
+
+  /* justify-items: stretch; */
+   /* =>기본값, 열 너비로의 배치 */
+
+   /* justify-items: start;
+   =>열 앞쪽에 붙음(왼쪽으로) */
+
+   /* justify-items: end;
+   =>열 뒤쪽에 붙음(오른쪽으로) */
+
+   /* justify-items: center;
+  =>가운데로~~~~ */
+
+  /* justify-items: end; */
+
+
+/* } */
+
+/* li:nth-child(1){}
+li:nth-child(2){align-self: start;}
+li:nth-child(3){}
+li:nth-child(4){align-self: end;}
+li:nth-child(5){align-self: center;} */
+
+/* =>align-self는 아이템에 각각의 배치를 줄 수 있다!  */
+
+/* li:nth-child(1){}
+li:nth-child(2){justify-self: start;}
+li:nth-child(3){}
+li:nth-child(4){justify-self: start;}
+li:nth-child(5){justify-self: center;} */
+
+
+.container{
+  display: grid;
+  height: 500px;
+
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+
+  /* align-content: start; */
+  /* align-content: end; */
+  /* align-items: start; */
+  /* align-content: space-around; */
+  /* =>각각의 아이템이 진행방향의 여백을 동일하게 가짐  알지알지?!*/
+
+  /* =>align-items은 행 안에서(트랙안에서) 공간의 배치방법 결정한다.
+   컨테이너 전체를 놓고 봤을 때 공간을 활용해서 배치한다!
+   헷갈리지 말자!!******************* */
+
+  align-content: space-evenly;
+  justify-content: space-between;
+
+}
+
+  </style>
+</head>
+<body>
+
+  <ul class="container">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+  </ul>
+  
+</body>
+</html>

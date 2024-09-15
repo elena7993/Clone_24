@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li{
+  list-style: none;
+}
+
+ul{
+  border: 5px solid teal;
+}
+
+li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  border: 5px solid tomato;
+  border-radius: 8px;
+}
+
+.container{
+  display: grid;
+  height: 500px;
+
+  /* grid-template-columns: 100px 1fr 2fr; */
+  /* grid-template-columns: 100px 100px 100px; */
+  /* =>세 개의 열이 각각 100px씩, 수치를 다르게 할 수 있음  */
+  /* =>다른 단위를 사용해도 가능(예를 들어 퍼센트) */
+
+  /* =>fr(프렉션):사용할 수 있는 공간에서 비율로 나누겠다는 뜻
+  =>몇대몇으로 나누겠다는 뜻*/
+
+
+  /* grid-template-columns: 100px 1fr;
+  grid-template-rows: 200px 1fr 1fr 1fr 1fr; */
+
+  /* =>2열 5행이을 원했으나 */
+  /* =>실제로는 요소가 부족하므로 2열 3행까지 나타나고 나머지는 공백으로 표시된다!  */
+
+
+  /* grid-template-columns: 100px 1fr; */
+  /* grid-template-rows: 200px 1fr 1fr; */
+
+  /* gap: 20px 10px; */
+  /* =>행사이의 간격은 20px 열사이의 간격은 10px */
+  /* grid-gap이라고 해도 된다! */
+
+  /* grid-template-columns: 100px 100px 100px; */
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+
+  /* grid-template-columns: repeat(2, minmax(100px, auto)); */
+  /* grid-template-rows: repeat(3, 1fr); */
+
+  /* minmax(최소길이, 최대길이를 한번에 지정할 수 있음 
+  상황에 따라 아이템으 크기를 변할 수 있게 해줌*/
+
+
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, auto)); */
+
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  
+  gap: 10px; */
+
+  
+  /* *auto-fill: 트랙의 최소길의 합보다 컨테이너의 길이가 길어진 경우, 빈 공간을 남김  */
+
+  /* *auto-fit:  auto-fill의 반대 컨테이너의 길이가 길어지면 트랙이 그 길이 맞춰 같이 늘어남*/
+
+
+  
+/* 아따 쉽지 않고만********************************************* */
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* li:nth-child(1){
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+} */
+
+/* li:nth-child(2){
+  grid-row: 1 / 3;
+} */
+
+li:nth-child(2){
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
