@@ -78,3 +78,129 @@ header{
   border-bottom: 1px solid #c1c1c1;
   margin-top: 10px;
 }
+
+.section_1{
+  width: 100%;
+}
+
+.container_1{
+  height: 600px;
+  background-color: lightgray;
+}
+
+.banner_wrap_1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.ban_1, .ban_2{
+  display: flex;
+  align-items: center;
+}
+
+.ban_1 img,
+.ban_2 img{
+  width: 620px;
+  height: 150px;
+}
+
+.black_box{
+  width: 139.6px;
+  height: 150px;
+  background-color: #000;
+}
+
+
+.gold_box{
+  width: 139.6px;
+  height: 150px;
+  background-color: #A39372;
+}
+
+/* section_1 end  */
+
+.section_2{
+  width: 100%;
+}
+
+.title_2{
+  width: 100%;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  /* margin: 0 auto; */
+  /* => 부모와 자식의 너비가 같으므로
+  쓸 수 없다.  */
+}
+
+.container_2{
+  width: 100%;
+  padding: 0 200px;
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con_wrap img{
+  width: 204px;
+  height: 272px;
+}
+
+.con_wrap .item_title{
+  font-size: 14px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.con_wrap p:nth-of-type(1){
+  font-size: 11px;
+  color: #777;
+}
+
+.con_wrap p:nth-of-type(2){
+  font-size: 11px;
+  color: #777;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+/* =>같은 태그 타입 중 몇 번째 인가를 기준으로함.  */
+
+.con_wrap .price{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price del{
+  font-size: 12px;
+  color: #777;
+}
+
+.con_1_btn{
+  width: 30px;
+  height: 20px;
+  font-size: 12px;
+  color: #777;
+  border: 1px solid #000;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
