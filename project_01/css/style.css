@@ -192,15 +192,31 @@ header{
   align-items: center;
 }
 
+.section_3{
+  width: 100%;
+  padding: 100px;
+}
 
+.container_3{
+  display: flex;
+  justify-content: center;
+}
 
+.left_con{
+  overflow: hidden;
+}
 
+.left.con img{
+  width: 752px;
+  height: 834px;
+}
 
-
-
-
-
-
-
-
+.right_con{
+  display: grid;
+  margin-left: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: 0 20px;
+  align-items: center;
+}
 
